@@ -1,0 +1,474 @@
+@charset "utf-8";
+/*
+   Theme Name: Kizuna
+   Theme URI: https://kizuna.world
+   Author: Mai Fujimoto, AtsukiTak
+   Description: You can create your own "kizuna" site by using this theme.
+   Version: 0.0
+   License: GNU General Public License v2 or later
+   License URI: http://www.gnu.org/licenses/gpl-2.0.html
+   Tags: donation
+
+   This theme is licensed under the GPL.
+   Use it to make something cool, have fun, and share what you've learned with others.
+ */
+
+/* Generic setting */
+body {
+  font-family: 'Mplus 1p', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.header-inner, .container, .footer-inner {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.red {
+  color: #cb5850;
+}
+
+.blue {
+  color: #47a3be;
+}
+
+.yellow {
+  color: #e2b948;
+}
+
+.green {
+  color: #a6bf4d;
+}
+
+/* ========= */
+/* Header    */
+/* ========= */
+
+header {
+  background-color: white;
+  border-bottom: solid 3px #eee
+}
+
+.site-title {
+  text-align: left;
+}
+
+.site-title h1 {
+  font-size: 2.4em;
+  width: auto;
+  margin: 0;
+  padding: 10px 5px 0;
+}
+
+.site-title h1 a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
+.header-inner {
+  position: relative;
+}
+
+#navbutton {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border: solid 1px #aaa;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+#navbutton img {
+  height: 16px;
+  width: 16px;
+}
+
+#navbutton:hover {
+  background-color: #ddd;
+}
+
+#navbutton:focus {
+ outline: none;
+}
+
+#navbutton i {
+  font-size: 2em;
+  color: #333;
+}
+
+#header-nav {
+  display: none;
+}
+
+.header-nav {
+  padding-left: 10px;
+}
+
+.header-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header-nav li a {
+  display: block;
+  padding: 15px 5px;
+  color: #000;
+  font-weight: bold;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.header-nav li a:hover {
+  opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+  #header-nav {
+    display: block!important;
+  }
+
+  .header-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .header-nav ul:after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+
+  .header-nav li {
+    display: inline-block;
+    width: auto;
+  }
+
+  .header-nav li a {
+    font-size: 1.1em;
+    padding: 5px 10px;
+  }
+
+  #navbutton {
+    display: none;
+  }
+}
+
+/* ========== */
+/* Footer     */
+/* ========== */
+
+footer {
+  background-color: #23282d;
+  border-top: solid 1px #ddd;
+}
+
+.footer-nav {
+  margin-bottom: 20px;
+}
+
+.footer-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-nav ul:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.footer-nav li {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+.footer-nav li a {
+  font-size: 0.9em;
+  display: block;
+  padding: 10px 5px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-nav li a:hover {
+  opacity: 0.6;
+}
+
+.copyright p {
+  font-size: 0.9em;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .footer-nav li {
+    width: auto;
+    text-align: left;
+  }
+
+  .footer-nav li a {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+
+  .copyright p {
+    text-align: right;
+  }
+}
+
+/* ================= */
+/* Top Page */
+/* ================= */
+
+.article-index {
+  margin: 200px 0;
+}
+
+.article-index a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-decoration: none;
+  color: #000;
+}
+
+.article-index .thumbnail {
+  height: 500px;
+  width: 500px;
+}
+
+.article-index .thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-index .index-contents {
+  position: relative;
+  vertical-align: top;
+  width: 350px;
+  padding: 20px;
+}
+
+.article-index .index-contents h2 {
+  font-size: 28px;
+  line-height: 1.4;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.article-index p {
+  font-size: 16px;
+  margin: 10px 0 0;
+  text-align: left;
+}
+
+.pagination {
+  margin: 40px 0 30px;
+  text-align: center;
+}
+
+.pagination ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pagination li {
+  display: inline-block;
+  width: auto;
+}
+
+.pagination li a, .pagination li > span {
+  font-size: .9em;
+  display: block;
+  width: 30px;
+  margin: 0 1px;
+  padding: 5px 0;
+  text-decoration: none;
+  color: #000;
+  border: solid 1px #ccc;
+  border-radius: 3px;
+}
+
+.pagination li > span {
+  color: #fff;
+  background-color: #464646;
+}
+
+.pagination li a:hover {
+  color: #fff;
+  background-color: #464646;
+}
+
+.pagination li .dots {
+  width: 15px;
+  padding: 0;
+  color: #000;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+@media (max-width: 1000px) {
+  .article-index a {
+    flex-direction: column-reverse;
+  }
+
+  .article-index .thumbnail {
+    width: 100%;
+    height: auto;
+  }
+
+  .article-index .index-contents {
+    width: auto;
+    height: auto;
+  }
+
+  .article-index h2 {
+    font-size: 26px;
+  }
+
+  .article-index p {
+    font-size: 14px;
+  }
+
+  .article-index .qrcode {
+    display: none;
+  }
+}
+
+/* =========== */
+/* Single Page */
+/* =========== */
+
+.article {
+  display: flex;
+  padding-top: 50px;
+  margin: 0px 0px;
+}
+
+.article .mobile-title {
+  display: none;
+}
+
+.article .generic-info {
+  padding: 160px 0px;
+  margin-right: 60px;
+  text-align: right;
+}
+
+.article .generic-info h1 {
+  width: 300px;
+  margin-bottom: 60px;
+}
+
+.article a {
+  text-decoration: none;
+  color: gray;
+  border-bottom: solid 1px gray;
+}
+
+.article .generic-info-contents {
+  color: gray;
+}
+
+.article .crypto-info {
+  margin-top: 60px;
+}
+
+.article .crypto-info h4 {
+  margin-bottom: 16px;
+}
+
+.article .crypto-info .addr {
+  font-size: 11px;
+}
+
+.article .crypto-info .qrcode {
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+}
+
+.qrcode canvas {
+  width: 100px;
+  height: 100px;
+}
+
+.article .main-content {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .article {
+    flex-direction: column-reverse;
+    padding: 20px;
+  }
+
+  .article .mobile-title {
+    display: block;
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  .article .pc-title {
+    display: none;
+  }
+
+  .article .generic-info {
+    margin: 0;
+    margin-top: 40px;
+    border-top: solid 1px gray;
+    padding: 0;
+  }
+
+  .article .generic-info-contents {
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .article .crypto-infos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .article .crypto-info {
+    margin: 20px;
+  }
+
+  .article .crypto-info .qrcode {
+    display: none;
+  }
+}

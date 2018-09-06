@@ -56,7 +56,7 @@
 <header class="site-header">
   <div class="header-inner">
     <div class="site-title">
-      <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+      <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri();?>/images/logo.jpg"></a>
     </div>
     
     <!-- Menu button -->

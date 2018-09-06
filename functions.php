@@ -33,6 +33,16 @@ function kizuna_setup() {
 endif; // kizuna_setup
 add_action( 'after_setup_theme', 'kizuna_setup' );
 
+
+function change_title_tag( $title ) {
+  if (is_category()) {
+    $title = get_bloginfo( 'name' );
+  }
+  return $title;
+}
+add_filter( 'pre_get_document_title', 'change_title_tag' );
+
+
 /**
  * Enqueue scripts and styles.
  */
@@ -63,16 +73,6 @@ function insert_meta_fields() {
   insert_radio_input("color", "blue", $current_color);
   insert_radio_input("color", "green", $current_color);
   insert_radio_input("color", "yellow", $current_color);
-
-  echo '<hr>';
-
-  $current_lang = get_post_meta($post->ID, 'lang', true);
-  if ($current_lang == "") {
-    $current_lang = "ja";
-  }
-  echo '<h4>Language</h4>';
-  insert_radio_input("lang", "ja", $current_lang);
-  insert_radio_input("lang", "en", $current_lang);
 
   echo '<hr>';
 
@@ -107,7 +107,6 @@ function insert_address_input($name, $current_value) {
 
 function save_custom_fields( $post_id ) {
   update_field_if_exist($post_id, 'color');
-  update_field_if_exist($post_id, 'lang');
   update_field_if_exist($post_id, 'btc_addr');
   update_field_if_exist($post_id, 'bch_addr');
   update_field_if_exist($post_id, 'hp');
